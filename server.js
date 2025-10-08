@@ -84,9 +84,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 app.listen(PORT, () => {
   console.log(`🚀 Backend server ${PORT} portunda çalışıyor`);
-  console.log(`🔍 Health check: http://192.168.3.111:${PORT}/health`);
-  console.log(`📊 API endpoint: http://192.168.3.111:${PORT}/api/financial/data`);
-  console.log(`🐛 Debug DB: http://192.168.3.111:${PORT}/api/debug/db`);
-  console.log(`🔧 Manuel Sync: http://192.168.3.111:${PORT}/api/debug/sync (POST)`);
-  console.log(`🧪 API Test: http://192.168.3.111:${PORT}/api/debug/test-api`);
+  console.log(`🔍 Health check: http://localhost:${PORT}/health`);
+  console.log(`📊 API endpoint: http://localhost:${PORT}/api/financial/data`);
+  console.log(`🐛 Debug DB: http://localhost:${PORT}/api/debug/db`);
+  console.log(`🔧 Manuel Sync: http://localhost:${PORT}/api/debug/sync (POST)`);
+  console.log(`🧪 API Test: http://localhost:${PORT}/api/debug/test-api`);
 });
