@@ -4,7 +4,7 @@
   "description": "Financial Data API Backend",
   "main": "server.js",
   "scripts": {
-    "build": "npm install && npx prisma generate",
+    "build": "npm install prisma generate",
     "start": "node server.js",
     "prisma:generate": "npx prisma generate",
     "postinstall": "npx prisma generate"
