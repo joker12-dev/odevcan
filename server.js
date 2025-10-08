@@ -9,6 +9,7 @@ const apiService = require('./services/apiService');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const prisma = new PrismaClient();
+const BASE_URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
 
 // Middleware
 app.use(cors());
@@ -84,9 +85,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 app.listen(PORT, () => {
   console.log(`🚀 Backend server ${PORT} portunda çalışıyor`);
-  console.log(`🔍 Health check: http://localhost:${PORT}/health`);
-  console.log(`📊 API endpoint: http://localhost:${PORT}/api/financial/data`);
-  console.log(`🐛 Debug DB: http://localhost:${PORT}/api/debug/db`);
-  console.log(`🔧 Manuel Sync: http://localhost:${PORT}/api/debug/sync (POST)`);
-  console.log(`🧪 API Test: http://localhost:${PORT}/api/debug/test-api`);
+  console.log(`🔍 Health check: ${BASE_URL}/health`);
+  console.log(`📊 API endpoint: ${BASE_URL}/api/financial/data`);
+  console.log(`🐛 Debug DB: ${BASE_URL}/api/debug/db`);
+  console.log(`🔧 Manuel Sync: ${BASE_URL}/api/debug/sync (POST)`);
+  console.log(`🧪 API Test: ${BASE_URL}/api/debug/test-api`);
 });
